@@ -23,7 +23,6 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public User addUser(@Valid @RequestBody UserRequestDTO userRequestDTO){
         User user=new User();
-        user.setId(userRequestDTO.getId());
         user.setName(userRequestDTO.getName());
         user.setRole(userRequestDTO.getRole());
         user.setEmail(userRequestDTO.getEmail());

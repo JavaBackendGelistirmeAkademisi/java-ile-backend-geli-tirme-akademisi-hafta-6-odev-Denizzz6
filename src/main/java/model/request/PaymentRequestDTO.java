@@ -13,9 +13,6 @@ public class PaymentRequestDTO {
     @NotNull(message = "isim boş bırakılamaz")
     private String name;
 
-    @NotNull(message = "id boş bırakılamaz.")
-    private int id;
-
     @NotNull(message = "miktar boş bırakılamaz.")
     private int amount;
 

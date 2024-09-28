@@ -9,6 +9,7 @@ import java.util.List;
 @Service
 public class ProjectService {
     private final ProjectRepository projectRepository;
+    private Project project;
 
     @Autowired
     public ProjectService(ProjectRepository projectRepository) {
@@ -16,6 +17,7 @@ public class ProjectService {
     }
 
     public Project createProject(Project project){
+        this.project = project;
         if (createProject(project)==null){
             throw new OutOfException("Proje bulunamadı.");
         }

@@ -27,7 +27,6 @@ private final PaymentService paymentService;
 @Transactional
     public Payment addPayment(@Valid @RequestBody PaymentRequestDTO paymentRequestDTO){
     Payment payment=new Payment();
-    payment.setId(paymentRequestDTO.getId());
     payment.setName(paymentRequestDTO.getName());
     payment.setType(paymentRequestDTO.getType());
     return paymentService.addPayment(payment);
@@ -50,7 +49,6 @@ if (payment==null){
 }
     payment.setName(paymentRequestDTO.getName());
     payment.setType(paymentRequestDTO.getType());
-    payment.setId(paymentRequestDTO.getId());
     payment.setAmount(paymentRequestDTO.getAmount());
     payment.setNote(paymentRequestDTO.getNote());
     return paymentService.updatePayment(payment);

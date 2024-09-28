@@ -19,8 +19,4 @@ public class OfferRequestDTO {
     @Size(message = "10.000 karakterden fazla yazılamaz.")
     private String terms;
 
-    @NotNull(message = "id boş bırakılamaz.")
-    private int id;
-
-
 }

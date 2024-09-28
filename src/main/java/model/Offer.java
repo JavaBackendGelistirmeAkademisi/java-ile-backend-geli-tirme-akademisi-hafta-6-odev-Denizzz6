@@ -1,7 +1,6 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +16,8 @@ public class Offer {
     @NotNull(message = "İsim boş bırakılamaz")
     private String name;
 
-    @NotNull(message = "id boş bırakılamaz.")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @NotNull(message = "Fiyat boş bırakılamaz.")

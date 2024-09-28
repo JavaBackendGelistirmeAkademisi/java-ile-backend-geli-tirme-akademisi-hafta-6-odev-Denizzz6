@@ -32,7 +32,6 @@ public Offer updateOffer(Offer offer){
         return offerRepository.findAll();
     }
 
-
     public Offer findById(Long id) {
         Optional<Offer> offer = offerRepository.findById(id);
         if (offer.isPresent()) {

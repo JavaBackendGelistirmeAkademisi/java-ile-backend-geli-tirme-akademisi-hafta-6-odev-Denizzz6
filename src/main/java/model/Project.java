@@ -1,7 +1,6 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,8 +13,8 @@ import javax.validation.constraints.NotNull;
     public class Project{
         @NotNull(message = "proje adı boş olamaz.")
         private String name;
-
-        @NotNull(message = "proje idsi boş olamaz.")
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id;
 
         @NotNull(message = "açıklama boş olamaz.")

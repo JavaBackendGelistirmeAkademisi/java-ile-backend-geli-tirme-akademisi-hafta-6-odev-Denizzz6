@@ -10,8 +10,6 @@ public class UserRequestDTO {
     @NotNull(message = "İsim boş bırakılamaz.")
     private String name;
 
-    @NotNull(message = "id boş bırakılamaz.")
-    private int id;
 
     @NotNull(message = "kullanıcı rolü boş bırakılamaz.")
     private String role;

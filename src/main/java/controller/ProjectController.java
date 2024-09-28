@@ -23,7 +23,6 @@ public class ProjectController {
     public Project createProject(@Valid @RequestBody ProjectRequestDTO projectRequestDTO){
         Project project=new Project();
         project.setName(projectRequestDTO.getName());
-        project.setId(projectRequestDTO.getId());
         project.setNote(projectRequestDTO.getNote());
         return projectService.createProject(project);
     }

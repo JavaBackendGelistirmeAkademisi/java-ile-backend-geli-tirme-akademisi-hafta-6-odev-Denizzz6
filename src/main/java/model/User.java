@@ -1,8 +1,6 @@
 package model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import javax.validation.constraints.NotNull;
@@ -16,7 +14,8 @@ import javax.validation.constraints.NotNull;
         @NotNull(message = "İsim boş bırakılamaz.")
         private String name;
 
-        @NotNull(message = "id boş bırakılamaz.")
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private int id;
 
         @NotNull(message = "kullanıcı rolü boş bırakılamaz.")

@@ -46,7 +46,6 @@ public class OfferController {
         if (offer == null) {
             throw new ChangeSetPersister.NotFoundException();
         }
-        offer.setId(offerRequestDTO.getId());
         offer.setName(offerRequestDTO.getName());
         offer.setPrice(offerRequestDTO.getPrice());
         offer.setTerms(offerRequestDTO.getTerms());
